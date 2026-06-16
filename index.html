@@ -20,15 +20,6 @@
                 <button onclick="searchRedirect()">Buscar</button>
             </li>
         </ul>
-
-        <script>
-            function searchRedirect() {
-                const searchTerm = document.getElementById('searchInput').value;
-                if (searchTerm.trim()) {
-                    window.location.href = 'productos.html?search=' + encodeURIComponent(searchTerm);
-                }
-            }
-        </script>
     </nav>
 
     <header>
@@ -38,5 +29,14 @@
     <footer id="footer">
         <p>&copy; 2026 DDecor. Todos los derechos reservados.</p>
     </footer>
+
+    <script>
+        function searchRedirect() {
+            const searchTerm = document.getElementById('searchInput').value;
+            if (searchTerm.trim()) {
+                window.location.href = 'productos.html?search=' + encodeURIComponent(searchTerm);
+            }
+        }
+    </script>
 
 </html>
