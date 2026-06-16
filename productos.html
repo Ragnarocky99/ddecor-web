@@ -15,15 +15,28 @@
             <li><a href="index.html">Inicio</a></li>
             <li><a href="productos.html">Productos</a></li>
             <li><a href="productos.html#footer">Contacto</a></li>
+            <li class="searchbar">
+                <input type="text" placeholder="Buscar algun producto..." id="searchInput">
+                <button onclick="searchRedirect()">Buscar</button>
+            </li>
         </ul>
     </nav>
     <header>
-        <h1>Bienvenido a DDecor</h1>
-        <p>Tu tienda</p>    
+        <h1>Productos</h1>
+        <p>Tu tienda</p>
     </header>
     <footer id="footer">
         <p>&copy; 2026 DDecor. Todos los derechos reservados.</p>
     </footer>
+
+    <script>
+        function searchRedirect() {
+            const searchTerm = document.getElementById('searchInput').value;
+            if (searchTerm.trim()) {
+                window.location.href = 'productos.html?search=' + encodeURIComponent(searchTerm);
+            }
+        }
+    </script>
 </body>
 
 </html>
